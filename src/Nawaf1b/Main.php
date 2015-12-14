@@ -35,8 +35,10 @@ class Main extends PluginBase implements Listener {
     public function Touch1b(PlayerInteractEvent $cto){
     $blockDis = $cto->getBlock()->getID();
     $block = $cto->getBlock();
+    if($cto->getPlayer()->isOp()){
     if($blockDis == $this->yml["ID-Block-Dis]){
-       $cto->getBlock()->dropItem(new \pocketmine\math\Vector3($block->x, $block->y,$block->z ), Item::get($this->yml["ID"],2);
+       $cto->getBlock()->dropItem(new \pocketmine\math\Vector3($block->x, $block->y,$block->z ), Item::get($this->yml["ItemID"],2);
+    }
     }
     }
 }
