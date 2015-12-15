@@ -36,8 +36,8 @@ class Main extends PluginBase implements Listener {
     $blockDis = $cto->getBlock()->getID();
     $block = $cto->getBlock();
     if($cto->getPlayer()->isOp()){
-    if($blockDis == $this->yml["ID-Block-Dis]){
-       $cto->getBlock()->dropItem(new \pocketmine\math\Vector3($block->x, $block->y,$block->z ), Item::get($this->yml["ItemID"],2);
+    if($blockDis == $this->yml["ID-Block-Dis"]){
+       $cto->getBlock()->dropItem(new \pocketmine\math\Vector3($block->x, $block->y,$block->z ), Item::get($this->yml["ItemID"],2));
     }
     }
     }
