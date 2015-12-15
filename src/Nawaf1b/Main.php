@@ -4,6 +4,7 @@ namespace Nawaf1b;
 
 use pocketmine\item\Item;
 
+use pocketmine\utils\Config
 use pocketmine\utils\TextFormat;
 use pocketmine\level\sound\AnvilUseSound;
 use pocketmine\nbt\tag\Compound;
