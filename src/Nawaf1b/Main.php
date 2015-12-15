@@ -4,12 +4,8 @@ namespace Nawaf1b;
 
 use pocketmine\item\Item;
 
-use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
-use pocketmine\level\sound\AnvilUseSound;
-use pocketmine\nbt\tag\Compound;
-use pocketmine\entity\Entity;
-use pocketmine\nbt\tag\Enum;
+use pocketmine\utils\Config;
 use pocketmine\nbt\tag\Double;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Random;
@@ -29,17 +25,28 @@ class Main extends PluginBase implements Listener {
         $this->getLogger()->info(TextFormat::BLUE ."===============");
         $this->getLogger()->info(TextFormat::GREEN ."Plugin By Nawaf");
         $this->getLogger()->info(TextFormat::BLUE ."===============");
-        $config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-        $this->yml = $config->getAll();
+    
+        
+    
+    
+		@mkdir($this->getDataFolder());
+		$this->yml = (new Config($this->getDataFolder()."config.yml", Config::YAML,array("BlockDispnser"=>"1")))->getAll();
+                $this->ymal = (new Config($this->getDataFolder()."config.yml", Config::YAML,array("ItemID"=>"1")))->getAll();
+		
+		$this->ymlBlock = $this->yml["BlockDispnser"];
             $this->getServer ()->getPluginManager ()->registerEvents ( $this, $this );
     }
     public function Touch1b(PlayerInteractEvent $cto){
     $blockDis = $cto->getBlock()->getID();
     $block = $cto->getBlock();
     if($cto->getPlayer()->isOp()){
-    if($blockDis == $this->yml["ID-Block-Dis"]){
-       $cto->getBlock()->dropItem(new \pocketmine\math\Vector3($block->x, $block->y,$block->z ), Item::get($this->yml["ItemID"],2));
+           
+    if($blockDis == $this->ymlBlock){
+   
+       $cto->getBlock()->dropItem(new \pocketmine\math\Vector3($block->x, $block->y,$block->z ), Item::get($this->ymal["ItemID"]));
     }
-    }
+            }
+    
     }
 }
+?>
