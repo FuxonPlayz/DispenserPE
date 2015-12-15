@@ -43,7 +43,7 @@ class Main extends PluginBase implements Listener {
            
     if($blockDis == $this->ymlBlock){
    
-       $cto->getBlock()->dropItem(new \pocketmine\math\Vector3($block->x, $block->y,$block->z ), Item::get($this->ymal["ItemID"]),2);
+       $cto->getPlayer()->getLevel()->dropItem(new \pocketmine\math\Vector3($block->x, $block->y,$block->z ), Item::get($this->ymal["ItemID"]),2);
     }
             }
     
