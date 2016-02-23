@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener {
 
         $this->getLogger()->info(TextFormat::BLUE ."==============================================");
         $this->getLogger()->info(TextFormat::GREEN ."Plugin By Nawaf");
-		$this->getLogger()->info(TextFormat::GREEN ."And Updated To PHP7 By FuxonPlayz On Instagram");
+		$this->getLogger()->info(TextFormat::GREEN ."And Updated To 0.14.0 By FuxonPlayz On Instagram");
         $this->getLogger()->info(TextFormat::BLUE ."==============================================");
     
         
