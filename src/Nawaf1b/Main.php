@@ -6,25 +6,26 @@ use pocketmine\item\Item;
 
 use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
-use pocketmine\nbt\tag\Double;
+use pocketmine\nbt\tag\DoubleTag;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Random;
 use pocketmine\event\entity\ExplosionPrimeEvent;
-use pocketmine\nbt\tag\Float;
+use pocketmine\nbt\tag\FloatTag;
 use pocketmine\event\Listener;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\protocol\UseItemPacket;
 use pocketmine\event\block\BlockPlaceEvent;
-use pocketmine\nbt\tag\Byte;
+use pocketmine\nbt\tag\ByteTag;
 use pocketmine\event\player\PlayerInteractEvent;
 
 class Main extends PluginBase implements Listener {
  public $yml;
     public function onEnable() {
 
-        $this->getLogger()->info(TextFormat::BLUE ."===============");
+        $this->getLogger()->info(TextFormat::BLUE ."==============================================");
         $this->getLogger()->info(TextFormat::GREEN ."Plugin By Nawaf");
-        $this->getLogger()->info(TextFormat::BLUE ."===============");
+		$this->getLogger()->info(TextFormat::GREEN ."And Updated To PHP7 By FuxonPlayz On Instagram");
+        $this->getLogger()->info(TextFormat::BLUE ."==============================================");
     
         
     
